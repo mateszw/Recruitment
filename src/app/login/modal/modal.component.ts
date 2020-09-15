@@ -12,22 +12,22 @@ export class ModalComponent implements OnInit {
   isModalOpen$: Observable<boolean>;
   loggedInText: boolean = false;
 
-  constructor(private ModalService: ModalService, private Router: Router) {}
+  constructor(private modalService: ModalService, private Router: Router) {}
 
   ngOnInit(): void {
-    this.isModalOpen$ = this.ModalService.modalState();
+    this.isModalOpen$ = this.modalService.modalState();
   }
 
   loggedIn(): void {
     this.loggedInText = true;
     setTimeout(() => {
       this.loggedInText = false;
-      this.ModalService.closeModal();
+      this.modalService.closeModal();
       this.Router.navigateByUrl('');
     }, 1500);
   }
 
   logInDenied(): void {
-    this.ModalService.closeModal();
+    this.modalService.closeModal();
   }
 }
