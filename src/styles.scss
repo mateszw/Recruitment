@@ -5,17 +5,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 62.5%; // 10 px
+  font-size: 90%;
   font-family: "Roboto Condensed", sans-serif;
 
-  @media (min-width: 768px) and (max-width: 991px) {
-    font-size: 70%;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    font-size: 80%;
-  }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     font-size: 100%;
   }
 }
