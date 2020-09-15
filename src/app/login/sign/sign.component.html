@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="signInForm">
+    <p class="control has-icons-left has-icons-right">
+      <input
+        [formControl]="signInForm.get('username')"
+        class="input"
+        type="text"
+        placeholder="Username"
+      />
+      <span class="icon is-small is-left">
+        <i class="far fa-user"></i>
+      </span>
+    </p>
+
+    <p class="control has-icons-left">
+      <input
+        [formControl]="signInForm.get('password')"
+        class="input"
+        type="password"
+        placeholder="Password"
+      />
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+    <div class="control">
+      <button
+        [disabled]="signInForm.invalid"
+        type="submit"
+        class="button is-link"
+        (click)="openModal()"
+      >
+        Log in
+      </button>
+    </div>
+  </form>
+</div>
+
+<app-modal *ngIf="this.isModalOpen$ | async"></app-modal>

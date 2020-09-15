@@ -1,0 +1,17 @@
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p *ngIf="!loggedInText" class="modal-card-title">
+        Are you sure you want to log In?
+      </p>
+      <p class="modal-card-title" *ngIf="loggedInText" style="color: green;">
+        Logged In <i class="fas fa-smile"></i>&nbsp;Redirecting...
+      </p>
+    </header>
+    <div *ngIf="!loggedInText" class="choice_buttons">
+      <button (click)="loggedIn()" class="button is-primary">Yes</button>
+      <button (click)="logInDenied()" class="button is-danger">No</button>
+    </div>
+  </div>
+</div>

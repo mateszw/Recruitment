@@ -1,0 +1,11 @@
+.choice_buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  .button {
+    min-width: 51%;
+  }
+}
+.modal-card-title {
+  text-align: center;
+}
